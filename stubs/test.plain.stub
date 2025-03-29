@@ -1,0 +1,41 @@
+<?php
+
+namespace {{ namespace }};
+
+use App\Data\Models\UserManagement\User;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Testing\Fluent\AssertableJson;
+use Laravel\Passport\ClientRepository;
+use Tests\Feature\_TestCase;
+
+class {{ class }} extends _TestCase
+{
+     private array $structure;
+
+     protected string $routeName;
+
+     protected function setUp(): void
+        {
+            parent::setUp();
+           // TODO: implement
+            $this->routeName = '';
+
+            $this->structure = [
+                'ability',
+                'success',
+                'message',
+
+            ];
+        }
+
+
+        public function test__correctly()
+        {
+             $data = [
+
+                    ];
+            $this
+                ->get(route($this->routeName, $data))
+                ->assertSuccessful();
+        }
+}

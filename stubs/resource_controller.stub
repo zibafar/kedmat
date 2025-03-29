@@ -1,0 +1,71 @@
+<?php
+
+namespace {{ namespace }};
+
+use App\Http\Controllers\Controller;
+use App\Http\Requests\GetPaginatedRequest;
+use Illuminate\Http\Request;
+use Illuminate\Http\Response;
+use {{ showFeatureNamespace }};
+use {{ getFeatureNamespace }};
+use {{ createFeatureNamespace }};
+use {{ updateFeatureNamespace }};
+use {{ deleteFeatureNamespace }};
+
+class {{ class }} extends Controller
+{
+    public function __construct(
+        private {{ show }} $showFeature,
+        private {{ get }} $getFeature,
+        private {{ create }} $createFeature,
+        private {{ update }} $updateFeature,
+        private {{ delete }} $deleteFeature
+    )
+    {
+    }
+
+    /**
+     * Display a listing of the resource.
+     */
+    public function index(GetPaginatedRequest $request): Response
+    {
+        // TODO : implement & match with the serve method arguments
+        return $this->getFeature->serve($request);
+    }
+
+    /**
+     * Store a newly created resource in storage.
+     */
+    public function store(Request $request): Response
+    {
+        // TODO : implement & match with the serve method arguments
+        return $this->createFeature->serve($request);
+    }
+
+    /**
+     * Display the specified resource.
+     */
+    public function show(string $id): Response
+    {
+        // TODO : implement & match with the serve method arguments
+        return $this->showFeature->serve($id);
+    }
+
+    /**
+     * Update the specified resource in storage.
+     */
+    public function update(Request $request, string $id): Response
+    {
+        // TODO : implement & match with the serve method arguments
+        return $this->updateFeature->serve($request, $id);
+    }
+
+    /**
+     * Remove the specified resource from storage.
+     */
+    public function destroy(string $id): Response
+    {
+        // TODO : implement & match with the serve method arguments
+        return $this->deleteFeature->serve($id);
+    }
+}

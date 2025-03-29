@@ -1,0 +1,27 @@
+<?php
+
+namespace {{ namespace }};
+
+use Illuminate\Http\Request;
+use {{ featureNamespace }};
+use Illuminate\Http\Response;
+
+class {{ class }}
+{
+    public function __construct(
+        private {{ feature }} $feature
+    )
+    {
+    }
+
+    /**
+     * Handle the incoming request
+     *
+     * @param Request $request
+     * @return Response
+     */
+    public function __invoke(Request $request): Response
+    {
+        return $this->feature->serve($request);
+    }
+}
