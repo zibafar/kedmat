@@ -11,6 +11,7 @@ class BookController extends Controller
 {
     public function index(BooksRequest $request, ListBooksFeature $feature): JsonResponse
     {
+
         return $feature->serve($request->getFilters(),$request->getLimit());
     }
 }

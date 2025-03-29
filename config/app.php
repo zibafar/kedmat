@@ -143,6 +143,7 @@ return [
         /*
          * Lucid Service Providers
          */
+         App\Services\Auth\Providers\ServiceProvider::class,
          App\Services\Book\Providers\ServiceProvider::class,
 
 

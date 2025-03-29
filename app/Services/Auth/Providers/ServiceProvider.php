@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Services\Book\Providers;
+namespace App\Services\Auth\Providers;
 
 use Illuminate\Support\Facades\Lang;
 use Illuminate\Support\Facades\View;
@@ -10,14 +10,14 @@ use Illuminate\Translation\TranslationServiceProvider;
 class ServiceProvider extends LaravelServiceProvider
 {
     /**
-     * Register Book service stuff.
+     * Register Auth service stuff.
      *
      * @return void
      */
     public function register(): void
     {
         /**
-         * TODO: uncomment if you want to make use of this Book service
+         * TODO: uncomment if you want to make use of this Sample service
          */
          $this->app->register(RouteServiceProvider::class);
          $this->registerResources();
@@ -28,7 +28,7 @@ class ServiceProvider extends LaravelServiceProvider
     }
 
     /**
-     * Register the Book service resource namespaces.
+     * Register the Auth service resource namespaces.
      *
      * @return void
      */
@@ -37,9 +37,9 @@ class ServiceProvider extends LaravelServiceProvider
         // Translation must be registered ahead of adding lang namespaces
         $this->app->register(TranslationServiceProvider::class);
 
-        Lang::addNamespace('Book', realpath(__DIR__ . '/../Resources/Lang'));
+        Lang::addNamespace('Auth', realpath(__DIR__ . '/../Resources/Lang'));
 
-        // View::addNamespace('Book', base_path('resources/views/vendor/Book'));
-        View::addNamespace('Book', realpath(__DIR__ . '/../Resources/views'));
+        // View::addNamespace('Auth', base_path('resources/views/vendor/Auth'));
+        View::addNamespace('Auth', realpath(__DIR__ . '/../Resources/views'));
     }
 }
