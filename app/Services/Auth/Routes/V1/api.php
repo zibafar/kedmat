@@ -1,7 +1,9 @@
 <?php
 
+use App\Foundation\Enums\MiddlewareAliasesEnum as Middleware;
 use App\Services\Auth\Http\Controllers\V1\AuthController;
 use Illuminate\Support\Facades\Route;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -21,4 +23,4 @@ use Illuminate\Support\Facades\Route;
 
 Route::post('login', [AuthController::class,"login"])->name('login');
 
-Route::middleware('auth:sanctum')->post('logout', [AuthController::class,"logout"])->name('logout');
+Route::middleware(Middleware::AUTH)->post('logout', [AuthController::class,"logout"])->name('logout');

@@ -2,6 +2,7 @@
 
 use App\Services\Book\Http\Controllers\V1\BookController;
 use Illuminate\Support\Facades\Route;
+use App\Foundation\Enums\MiddlewareAliasesEnum as Middleware;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,4 +20,4 @@ use Illuminate\Support\Facades\Route;
 
 // Controllers should live in App/Services/Book/Http/Controllers
 
-Route::apiResource('books', BookController::class);
+Route::middleware(Middleware::AUTH)->apiResource('books', BookController::class);
