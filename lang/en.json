@@ -1,0 +1,47 @@
+{
+    
+    "success_sign_in": "Success: You are now signed in.",
+    "success_reset": "Password Reset Successful: Your password has been successfully reset.",
+    "success_refresh_token": "Success! A new access token has been issued.",
+    "success_logout": "Success! You have been Safely logged out of your current session. We hope to see you again soon!",
+  
+    "success_resource_created": "Successfully created the :resource information.",
+    "success_resource_restore": "Successfully restore the :resource information.",
+    "success_resource_list_retrieved": "Successfully retrieved the :resource information.",
+    "resource_already_exists": ":resource already exists Successfully.",
+    "success_resource_updated": "Successfully updated the :resource information.",
+    "success_resource_deleted": "Successfully deleted the :resource information.",
+    "success_user_blocked": "Successfully blocked the user.",
+    "success_user_unblocked": "Successfully unblocked the user.",
+
+   
+    "error_generic": "An error occurred. Please try again later.",
+    "error_unauthorized_generic": "You are not authorized to access this resource.",
+    "error_not_found_generic": "The requested resource could not be located.",
+    "error_unauthenticated": "Oops! It looks like you need to authenticate. Please log in or register to access this resource.",
+    "error_unauthorized": "You are not authorized to access this :resource.",
+    "error_refresh_token": "The refresh token is invalid.",
+
+ 
+    "error_not_found": "The :resource could not be located.",
+    "error_not_found_or_not_allow": "The :resource could not be located or You do not have access permission",
+    "error_unknown": "Oops! Sometings went wrong!",
+    "error_resource_create": "Failed to create the :resource. Please try again.",
+    "error_resource_update": "Update failed. The :resource could not be updated.",
+    "error_resource_delete": "Deletion failed. The :resource could not be removed.",
+    "error_invalid_creds": "The provided credentials are not valid",
+    "error_logout_failed": "We’re sorry, but we couldn’t log you out at this moment. Please try again later.",
+    "error_user_not_blocked": "Oops! The user is not blocked.",
+    "error_user_not_found": "Oops! The user is not found.",
+    "error_token_not_found": "Oops! The token is not found.",
+    "error_user_not_allowed": "Oops! The user is not allowed.",
+    "user_already_blocked": "Oops! The user is already blocked.",
+    "error_unique_identifier": "The :attribute must be unique among email, username, and mobile columns.",
+    "error_you_are_blocked": "Your account has been temporarily suspended due to policy violations. Please contact support for further assistance.",
+
+    "success_set_status_resource": "Successfully :status the :resource.",
+    "error_already_existed_status": "Oops! The :resource is already :status.",
+    "error_too_much_attempts": "You have exceeded the maximum number of authentication attempts. Please wait for :minutes minutes before trying again. If you continue to see this message, please contact our support team.",
+
+  
+}
