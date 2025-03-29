@@ -3,6 +3,7 @@
 namespace App\Data\Models;
 
 use App\Foundation\Enums\TablesEnum;
+use App\Services\Book\Builders\BookBuilder;
 use App\Services\Book\Database\Factories\BookFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;

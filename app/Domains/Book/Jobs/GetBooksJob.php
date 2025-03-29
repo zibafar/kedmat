@@ -2,10 +2,15 @@
 
 namespace App\Domains\Book\Jobs;
 
+use App\Data\Models\Book;
+use App\Services\Book\Builders\BookBuilder;
+
 class GetBooksJob
 {
-    public function handle()
+    public function handle(array $filters,$limit)
     {
-        // TODO : implement
+        return Book::query()
+            ->filter($filters)
+            ->paginate($limit);
     }
 }

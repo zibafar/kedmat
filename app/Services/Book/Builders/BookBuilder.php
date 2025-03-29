@@ -49,9 +49,7 @@ class BookBuilder extends BaseBuilder
         $sort_arr = extractSort($sortBy);
         $column = $sort_arr['column'];
         $direction = $sort_arr['direction'];
-        $this->orderBy($column, $direction)
-            ->orderBy('popularity','desc')
-            ->orderBy('priority','desc');
+        $this->orderBy($column, $direction);
         return $this;
     }
 }
