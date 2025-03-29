@@ -15,7 +15,7 @@ class BookBuilder extends BaseBuilder
 
         if (isset($filters['s'])) {
             //whereAny //https://techvblogs.com/blog/laravel-10-47-whereany-whereall
-            $this->filterMultiLike(['name'], $filters['s']);
+            $this->filterMultiLike(['title','isbn'], $filters['s']);
         }
 
         if (isset($filters['from'])) {

@@ -5,15 +5,13 @@ namespace App\Data\Models;
 use App\Foundation\Enums\TablesEnum;
 use App\Services\Book\Builders\BookBuilder;
 use App\Services\Book\Database\Factories\BookFactory;
-use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Factories\HasFactory;
 
-class Book extends Model
+
+class Book extends __Model
 {
 
     use BookAttributes,
-    BookRelationships,
-    HasFactory;
+    BookRelationships;
 
 protected $table = TablesEnum::BOOKS;
 
@@ -63,7 +61,10 @@ trait BookAttributes
 
 trait BookRelationships
 {
-
+    public function versions()
+    {
+        return $this->hasMany(BookVersion::class);
+    }
 
 }
 

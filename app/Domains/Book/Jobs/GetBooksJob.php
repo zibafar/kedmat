@@ -10,6 +10,7 @@ class GetBooksJob
     public function handle(array $filters,$limit)
     {
         return Book::query()
+            ->with('versions')
             ->filter($filters)
             ->paginate($limit);
     }

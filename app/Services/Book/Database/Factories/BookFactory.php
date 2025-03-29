@@ -24,6 +24,7 @@ class BookFactory extends Factory
         return [
             'title' =>fake()->unique()->word,
             'author' =>fake()->lastName(),
+            'isbn' =>fake()->numberBetween(100,10000),
 
         ];
     }
