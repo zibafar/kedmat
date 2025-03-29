@@ -1,0 +1,68 @@
+<?php
+
+namespace App\Data\Models;
+
+use App\Foundation\Enums\TablesEnum;
+use App\Services\Book\Database\Factories\BookFactory;
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+
+class Book extends Model
+{
+
+    use BookAttributes,
+    BookRelationships,
+    HasFactory;
+
+protected $table = TablesEnum::BOOKS;
+
+const COLUMNS = [
+    'id',
+    'title',
+    'author',
+    'isbn',
+    'category',
+    'updated_at',
+    'created_at'
+];
+
+protected $fillable = [
+    'id',
+    'title',
+    'author',
+    'isbn',
+    'category',
+    'updated_at',
+    'created_at'
+];
+
+protected $casts = [
+    'created_at' => 'timestamp',
+    'updated_at' => 'timestamp',
+];
+
+
+protected static function newFactory(): BookFactory
+{
+    return BookFactory::new();
+}
+
+public function newEloquentBuilder($query): BookBuilder
+{
+    return new BookBuilder($query);
+}
+
+
+}
+
+trait BookAttributes
+{
+
+}
+
+trait BookRelationships
+{
+
+
+}
+
